@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="/css/product-master.css">
+    <meta charset="utf-8">
+    <title>Vintage</title>
+
+    	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Noto+Sans:wght@300;400&family=Poppins:wght@500;600&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Noto+Sans:wght@300;400&family=Poppins:wght@500;600&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+
+
+  </head>
+  <body>
+
+    <div class="banner">
+        <div class="navbar">
+        <a href="index.html">  <img src="/img/homer.png" class="logo"></a>
+        <ul>
+          <li><a href="index.html">Shop</a></li>
+          <li><a href="index.html">Sale</a></li>
+          <li><a href="selltous.html">Sell To Us</a></li>
+          <li><a href="index.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        </div>
+        </div>
+
+
+
+
+        <div id="content-wrapper">
+
+
+		<div class="column">
+			<img id=featured src="img/jacket1.png">
+
+			<div id="slide-wrapper" >
+
+
+				<div id="slider">
+					<img class="thumbnail active" src="img/jacket1.png">
+					<img class="thumbnail" src="img/jacket2.png">
+
+
+				</div>
+
+
+			</div>
+		</div>
+
+		<div class="column">
+			<h1>Nike Vintage Jacket</h1>
+
+			<h3>89.99 €</h3>
+
+  <div class="descrpt">
+
+
+
+      <div class="properties">
+
+          <h1 class="color"></h1>
+          <h1 class="cond">8/10</h1>
+          <h1 class="size">M</h1>
+          </div>
+<div class="canvases">
+      <canvas id="canvas" width="300" height="300" class="circle"> </canvas>
+        <canvas id="canvas" width="300" height="300" class="circle"></canvas>
+          <canvas id="canvas-color" width="300" height="300" class="circle"></canvas>
+</div>
+
+<div class="cart">
+
+	<a class="to-cart" href="#">Add to Cart</a>
+  </div>
+
+	</div>
+
+</div>
+
+	<script type="text/javascript">
+		let thumbnails = document.getElementsByClassName('thumbnail')
+
+		let activeImages = document.getElementsByClassName('active')
+
+		for (var i=0; i < thumbnails.length; i++){
+
+			thumbnails[i].addEventListener('mouseover', function(){
+				console.log(activeImages)
+
+				if (activeImages.length > 0){
+					activeImages[0].classList.remove('active')
+				}
+
+
+				this.classList.add('active')
+				document.getElementById('featured').src = this.src
+			})
+		}
+
+
+		let buttonRight = document.getElementById('slideRight');
+		let buttonLeft = document.getElementById('slideLeft');
+
+		buttonLeft.addEventListener('click', function(){
+			document.getElementById('slider').scrollLeft -= 180
+		})
+
+		buttonRight.addEventListener('click', function(){
+			document.getElementById('slider').scrollLeft += 180
+		})
+
+
+	</script>
+
+
+  </body>
+</html>
