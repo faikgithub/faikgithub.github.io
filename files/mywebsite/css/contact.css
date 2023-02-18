@@ -57,7 +57,7 @@ body{
 }
 
 .left{
-	background: url("/img/bg.png") no-repeat center;
+	background: url("/files/mywebsite/img/bg.png") no-repeat center;
 	background-size: cover;
 	height: 100%;
 }
